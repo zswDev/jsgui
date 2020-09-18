@@ -1,3 +1,9 @@
+## 运行方式
+     git clone https://github.com/zswDev/jsgui.git
+     cd jsgui
+     java -Dfile.encoding=utf-8 -jar rhino-1.7.12.jar _wx.js
+
+
 
 ## 逻辑线程，渲染线程
 ### 通过virtual dom 和 webview交互
