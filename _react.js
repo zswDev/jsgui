@@ -1,3 +1,9 @@
+/**
+ * 实现 虚拟dom
+ * 实现 react props, state 组件
+ * 实现 diff算法
+ * 实现 组件间通信 或 redux
+*/
 
 let _old_toString = Object.prototype.toString
 const log = (obj) => print(JSON.stringify(obj, null, 4))

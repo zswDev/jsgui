@@ -1,3 +1,7 @@
+/**
+ * 实现webview 事件循环
+ * 实现逻辑线程 和渲染线程通信
+*/
 
 importPackage(java.io)
 importPackage(java.net)
@@ -92,10 +96,6 @@ _webview.prototype._main_loop = function(){ // 主消息轮询
     })
     this.wv.addJavascriptCallback('_evt_cb', evt => {
         if(evt !== '[]') {
-            // evt = JSON.parse(evt)
-            // let _id = evt[0]
-            // let evt_name = evt[1]
-            
             this.logic_queue.add(evt)
         }
     })
@@ -132,16 +132,16 @@ _webview.prototype.postMessage = function(data) {
     this.msg_queue.add(params)
 }
 
-let i = 1
+//let i = 1
 _webview.prototype.onmessage = function(data) {
 
      //this.logic_queue.add(data)
-    print(Thread.currentThread().getName(), 'onmessage:', Date.now() - data)
+    // print(Thread.currentThread().getName(), 'onmessage:', Date.now() - data)
 
-    if (i < 5) {
-        ++i
-        this.postMessage(Date.now())
-    }
+    // if (i < 5) {
+    //     ++i
+    //     this.postMessage(Date.now())
+    // }
 }
 _webview.prototype.loop = function(){
     while(true){

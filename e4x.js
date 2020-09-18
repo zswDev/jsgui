@@ -1,4 +1,6 @@
-
+/** 
+ * 测试 e4x
+*/
 const log = (obj) => print(JSON.stringify(obj, null, 4))
 const getType = (obj) => Object.prototype.toString.call(obj)
 const isType = (obj, type) => getType(obj) === type

@@ -1,3 +1,8 @@
+/**
+ * native组件 + 虚拟dom + diff算法 + 双线程ui; demo
+ * 
+*/
+
 
 importPackage(javax.swing)
 importPackage(java.lang)
