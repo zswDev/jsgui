@@ -260,7 +260,7 @@ const diff = (old_tree, new_tree, ret) => {
             }
         } else {
             let old_c = old_childs[i]
-            child.delete.push({         //
+            child.delete.push({  
                 name: old_c.name,
                 idx: old_c.idx
             })
